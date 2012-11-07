@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=mydev
+# This doesn't source your bashrc, so use either an absolute path
+# or put the script in /usr/bin or somewhere
+Exec=mydev
+

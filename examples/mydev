@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# to run a cmd:
+#    xfce4-terminal --gemeometry=... -x bash-exec-interactive \
+#           cmd1 \; cmd2 \; [cmd3 \;...] &
+# 
+
+MYTERM=xfce4-terminal
+
+# left big view
+$MYTERM --geometry=94x48+0+0 -x bash-exec-interactive \
+    cd ~ \; ifconfig &
+
+# right side small windows
+$MYTERM --geometry=81x15-0+0 -x bash-exec-interactive \
+    ls \; echo "haha" &
+
+$MYTERM --geometry=81x15-0+330 -x bash-exec-interactive \
+    ping -c3 127.0.0.1 &
+
+$MYTERM --geometry=81x13-0+660 -x bash-exec-interactive \
+    ls &
+
+
